@@ -1,18 +1,21 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { ChevronDown, Github, Mail } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ChevronDown, Github, Mail } from "lucide-react";
 
 const Hero = () => {
   const scrollToAbout = () => {
-    const element = document.querySelector('#about')
+    const element = document.querySelector("#about");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-indigo-50 via-white to-cyan-50 overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-indigo-50 via-white to-cyan-50 overflow-hidden"
+    >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
@@ -34,9 +37,9 @@ const Hero = () => {
             className="relative mx-auto w-48 h-48 mb-8"
           >
             <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-400 to-accent-400 p-1">
-              <img 
-                src="C:\Users\KhanhBlu\OneDrive\Hình ảnh\BK\bk_AI\baokhanh_doanhnhan.png" 
-                alt="Bao Khanh" 
+              <img
+                src="/images/bk-top1avatar-edited.jpg"
+                alt="Bao Khanh"
                 className="w-full h-full rounded-full object-cover"
               />
             </div>
@@ -49,7 +52,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
-              Hi, I'm <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent animate-pulse">Bao Khanh</span>
+              Hi, I'm{" "}
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent animate-pulse">
+                Bao Khanh
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-6 font-medium">
               Full-Stack Developer & Tech Innovator
@@ -63,8 +69,10 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-light"
           >
-            Passionate self-taught developer from Đà Nẵng, Vietnam 🇻🇳. Specializing in modern web technologies 
-            and creating innovative digital solutions. Always learning, always building something amazing.
+            Passionate self-taught developer from Đà Nẵng, Vietnam 🇻🇳.
+            Specializing in modern web technologies and creating innovative
+            digital solutions. Always learning, always building something
+            amazing.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -74,9 +82,12 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <motion.button 
+            <motion.button
               onClick={scrollToAbout}
-              whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
+              }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
@@ -123,7 +134,7 @@ const Hero = () => {
         </motion.button>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
