@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ChevronDown, Github, Mail } from "lucide-react";
 
 const Hero = () => {
@@ -22,6 +23,7 @@ const Hero = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-400/20 to-blue-600/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-purple-400/10 to-pink-600/10 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
+
       <div className="container-max section-padding text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -37,9 +39,12 @@ const Hero = () => {
             className="relative mx-auto w-48 h-48 mb-8"
           >
             <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-400 to-accent-400 p-1">
-              <img
+              <Image
                 src="/images/bk-top1avatar-edited.jpg"
                 alt="Bao Khanh"
+                width={192}
+                height={192}
+                priority
                 className="w-full h-full rounded-full object-cover"
               />
             </div>
@@ -93,6 +98,7 @@ const Hero = () => {
             >
               Discover My Journey
             </motion.button>
+
             <div className="flex gap-4">
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -102,6 +108,7 @@ const Hero = () => {
               >
                 <Mail size={22} className="text-gray-700" />
               </motion.a>
+
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
