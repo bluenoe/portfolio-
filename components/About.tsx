@@ -63,8 +63,8 @@ const About = () => {
           >
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Hey there! I'm <span className="font-semibold text-blue-600">Bao Khanh</span>, a passionate self-taught developer from 
-                <span className="font-semibold text-purple-600">Đà Nẵng, Vietnam</span> 🇻🇳. My journey in software 
+                Hey there! I'm <span className="font-semibold text-blue-600"> Bao Khanh</span>, a passionate self-taught developer from 
+                <span className="font-semibold text-purple-600"> Đà Nẵng, Vietnam</span> 🇻🇳. My journey in software 
                 development started with curiosity and has evolved into a deep love for creating 
                 innovative digital solutions that make a real impact.
               </p>
