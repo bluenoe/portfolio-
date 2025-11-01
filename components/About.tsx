@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { User, Heart, Zap, Globe } from 'lucide-react'
+import { User, Heart, Zap, Globe, Cloud, Atom, GitBranch, Rocket } from 'lucide-react'
 
 const About = () => {
   const ref = useRef(null)
@@ -11,24 +11,24 @@ const About = () => {
 
   const highlights = [
     {
-      icon: <User className="w-6 h-6" />,
-      title: "Self-Taught",
-      description: "Passionate about learning and growing through hands-on experience"
+      icon: <Cloud className="w-6 h-6" />,
+      title: "Cloud-Native Enthusiast",
+      description: "Passionate about leveraging cloud platforms (AWS, Azure, GCP) for scalable and resilient infrastructure."
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Gen-Z Energy",
-      description: "Bringing fresh perspectives and modern approaches to development"
+      icon: <Atom className="w-6 h-6" />,
+      title: "Automation Advocate",
+      description: "Driven by automating repetitive tasks and streamlining workflows to boost efficiency and reduce manual errors."
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multilingual",
-      description: "Learning English and Korean while being fluent in Vietnamese"
+      icon: <GitBranch className="w-6 h-6" />,
+      title: "CI/CD Champion",
+      description: "Building robust CI/CD pipelines with tools like GitHub Actions to ensure rapid and reliable software delivery."
     },
     {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Tech-Curious",
-      description: "Always exploring new technologies and building innovative solutions"
+      icon: <Rocket className="w-6 h-6" />,
+      title: "Infrastructure as Code (IaC) Pro",
+      description: "Proficient in defining and managing infrastructure using code (Terraform, Ansible) for consistency and version control."
     }
   ]
 
@@ -48,7 +48,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-700 to-purple-700 bg-clip-text text-transparent">
-            🧍 About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Me</span>
+            🧠 About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Me (DevOps Version)</span>
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 mx-auto mb-8 rounded-full"></div>
         </motion.div>
@@ -63,24 +63,15 @@ const About = () => {
           >
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Hey there! I'm <span className="font-semibold text-blue-600"> Bao Khanh</span>, a passionate self-taught developer from 
-                <span className="font-semibold text-purple-600"> Đà Nẵng, Vietnam</span> 🇻🇳. My journey in software 
-                development started with curiosity and has evolved into a deep love for creating 
-                innovative digital solutions that make a real impact.
+                Hey there! I'm <span className="font-semibold text-blue-600">Bao Khanh</span>, a self-taught DevOps enthusiast from <span className="font-semibold text-purple-600">Đà Nẵng, Vietnam</span> 🇻🇳. My tech journey began with curiosity about how code becomes a running system — and that curiosity evolved into a passion for automation, reliability, and building scalable infrastructures.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Currently diving deep into <span className="font-semibold text-cyan-600">full-stack development</span>, I'm exploring the exciting world 
-                of modern web technologies while also expanding my linguistic horizons by learning English 
-                and Korean. I believe that great code, like great communication, bridges gaps and 
-                connects people across cultures.
+                Right now, I’m diving deep into DevOps and cloud engineering, learning how to bridge the gap between development and operations through tools like Docker, Nginx, GitHub Actions, and CI/CD pipelines. I love designing environments where deployment feels effortless and systems run like clockwork ⏱️.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                When I'm not coding, you'll find me gaming, designing creative projects, or 
-                experimenting with cutting-edge tools and frameworks. I'm always excited about the next 
-                challenge and the opportunity to grow both personally and professionally in this 
-                ever-evolving tech landscape.
+                Beyond the terminal, I’m into gaming, tinkering with Linux setups, and experimenting with new automation tools. I’m driven by the challenge of making things faster, smarter, and more reliable — one container, one pipeline at a time.
               </p>
             </div>
 
