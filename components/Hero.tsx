@@ -74,14 +74,14 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-light"
           >
-            Hey there! I'm Blu, a self-taught IT student from Da Nang, Vietnam 🇻🇳,
-            diving deep into the exciting world of DevOps. I'm all about
+            Hey there! I'm Blu, a self-taught IT student from Da Nang, Vietnam
+            🇻🇳, diving deep into the exciting world of DevOps. I'm all about
             automating everything, building robust cloud infrastructure, and
-            making sure systems run smoother than a fresh deployment.
-            Currently, I'm leveling up my skills in Docker, Kubernetes, CI/CD
-            pipelines, and cloud deployment strategies. My mission? To bridge
-            the gap between development and operations with efficient, scalable,
-            and super reliable infrastructure. Let's build some awesome stuff!
+            making sure systems run smoother than a fresh deployment. Currently,
+            I'm leveling up my skills in Docker, Kubernetes, CI/CD pipelines,
+            and cloud deployment strategies. My mission? To bridge the gap
+            between development and operations with efficient, scalable, and
+            super reliable infrastructure. Let's build some awesome stuff!
           </motion.p>
 
           {/* CTA Buttons */}

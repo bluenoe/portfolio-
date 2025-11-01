@@ -1,32 +1,45 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
-import { Mail, Github, Linkedin, MapPin, Send, CheckCircle } from 'lucide-react'
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import {
+  Mail,
+  Github,
+  Linkedin,
+  MapPin,
+  Send,
+  CheckCircle,
+} from "lucide-react";
 
 const Contact = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Simulate form submission
-    setIsSubmitted(true)
+    setIsSubmitted(true);
     setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({ name: '', email: '', message: '' })
-    }, 3000)
-  }
+      setIsSubmitted(false);
+      setFormData({ name: "", email: "", message: "" });
+    }, 3000);
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const contactInfo = [
     {
@@ -34,33 +47,36 @@ const Contact = () => {
       title: "Email",
       value: "baokhanh.dev281@gmail.com",
       link: "mailto:baokhanh.dev281@gmail.com",
-      color: "text-blue-600"
+      color: "text-blue-600",
     },
     {
       icon: <Github className="w-6 h-6" />,
       title: "GitHub",
       value: "github.com/bluenoe",
       link: "https://github.com/bluenoe/",
-      color: "text-gray-800"
+      color: "text-gray-800",
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       title: "LinkedIn",
       value: "linkedin.com/in/bao-khanh-95102b280",
       link: "https://www.linkedin.com/in/bao-khanh-95102b280",
-      color: "text-blue-700"
+      color: "text-blue-700",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Location",
       value: "Đà Nẵng - Việt Nam",
       link: null,
-      color: "text-green-600"
-    }
-  ]
+      color: "text-green-600",
+    },
+  ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-10 right-20 w-64 h-64 bg-gradient-to-br from-blue-300/20 to-purple-400/20 rounded-full blur-3xl"></div>
@@ -75,11 +91,15 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-700 to-purple-700 bg-clip-text text-transparent">
-            📬 Let's <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Connect</span>
+            📬 Let's{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Connect
+            </span>
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 mx-auto mb-8 rounded-full"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            I'm always excited to discuss new opportunities, collaborate on projects, or just chat about technology and development.
+            I'm always excited to discuss new opportunities, collaborate on
+            projects, or just chat about technology and development.
           </p>
         </motion.div>
 
@@ -94,7 +114,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold mb-6 text-gray-900">
               Send me a message
             </h3>
-            
+
             {isSubmitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -112,7 +132,10 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Your Name
                   </label>
                   <input
@@ -126,9 +149,12 @@ const Contact = () => {
                     placeholder="Enter your name"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Email Address
                   </label>
                   <input
@@ -142,9 +168,12 @@ const Contact = () => {
                     placeholder="Enter your email"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message
                   </label>
                   <textarea
@@ -158,7 +187,7 @@ const Contact = () => {
                     placeholder="Tell me about your project or just say hello!"
                   />
                 </div>
-                
+
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -184,8 +213,9 @@ const Contact = () => {
                 Get in touch
               </h3>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Whether you're looking for a developer for your next project, want to collaborate, 
-                or just want to say hi, I'd love to hear from you. Let's build something amazing together!
+                Whether you're looking for a developer for your next project,
+                want to collaborate, or just want to say hi, I'd love to hear
+                from you. Let's build something amazing together!
               </p>
             </div>
 
@@ -194,32 +224,38 @@ const Contact = () => {
                 <motion.div
                   key={info.title}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                   className="bg-white/70 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-white/50"
                 >
                   {info.link ? (
                     <a
                       href={info.link}
-                      target={info.link.startsWith('http') ? '_blank' : '_self'}
-                      rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      target={info.link.startsWith("http") ? "_blank" : "_self"}
+                      rel={
+                        info.link.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                       className="flex items-center gap-4 hover:scale-105 transition-transform duration-300"
                     >
-                      <div className={`${info.color}`}>
-                        {info.icon}
-                      </div>
+                      <div className={`${info.color}`}>{info.icon}</div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">{info.title}</h4>
+                        <h4 className="font-semibold text-gray-900">
+                          {info.title}
+                        </h4>
                         <p className="text-gray-600 text-sm">{info.value}</p>
                       </div>
                     </a>
                   ) : (
                     <div className="flex items-center gap-4">
-                      <div className={`${info.color}`}>
-                        {info.icon}
-                      </div>
+                      <div className={`${info.color}`}>{info.icon}</div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">{info.title}</h4>
+                        <h4 className="font-semibold text-gray-900">
+                          {info.title}
+                        </h4>
                         <p className="text-gray-600 text-sm">{info.value}</p>
                       </div>
                     </div>
@@ -239,7 +275,8 @@ const Contact = () => {
                 🚀 Ready to work together?
               </h4>
               <p className="text-gray-600 text-sm mb-4">
-                I'm currently available for freelance projects and full-time opportunities.
+                I'm currently available for freelance projects and full-time
+                opportunities.
               </p>
               <div className="flex gap-3">
                 <motion.a
@@ -266,7 +303,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

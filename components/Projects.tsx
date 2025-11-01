@@ -1,55 +1,68 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
-import { ExternalLink, Github, Calendar, Code } from 'lucide-react'
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { ExternalLink, Github, Calendar, Code } from "lucide-react";
 
 const Projects = () => {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const projects = [
     {
       title: "BluMonitor",
-      description: "A robust Python-based log monitoring tool, containerized with Docker for easy deployment and scalability. Ensures system health and proactive issue detection.",
+      description:
+        "A robust Python-based log monitoring tool, containerized with Docker for easy deployment and scalability. Ensures system health and proactive issue detection.",
       image: "/api/placeholder/400/250", // Placeholder image
       techStack: ["Python", "Docker", "Monitoring", "Automation"],
       githubLink: "https://github.com/bluenoe/blumonitor", // Example link
       liveLink: "#", // No live link for a backend tool
-      category: "DevOps Tool"
+      category: "DevOps Tool",
     },
     {
       title: "BluApp",
-      description: "A Node.js web application featuring an Nginx reverse proxy for efficient load balancing and a fully automated CI/CD pipeline for seamless deployments.",
+      description:
+        "A Node.js web application featuring an Nginx reverse proxy for efficient load balancing and a fully automated CI/CD pipeline for seamless deployments.",
       image: "/api/placeholder/400/250", // Placeholder image
       techStack: ["Node.js", "Nginx", "CI/CD", "GitHub Actions", "Deployment"],
       githubLink: "https://github.com/bluenoe/bluapp", // Example link
       liveLink: "#", // Example live link
-      category: "Web Application"
+      category: "Web Application",
     },
     {
       title: "BluChat",
-      description: "A real-time chat application, fully containerized using Docker Compose with MongoDB for persistent data. Demonstrates multi-container orchestration and scalability.",
+      description:
+        "A real-time chat application, fully containerized using Docker Compose with MongoDB for persistent data. Demonstrates multi-container orchestration and scalability.",
       image: "/api/placeholder/400/250", // Placeholder image
-      techStack: ["Docker Compose", "MongoDB", "Containerization", "Orchestration", "Scalability"],
+      techStack: [
+        "Docker Compose",
+        "MongoDB",
+        "Containerization",
+        "Orchestration",
+        "Scalability",
+      ],
       githubLink: "https://github.com/bluenoe/bluchat", // Example link
       liveLink: "#", // Example live link
-      category: "Containerized App"
+      category: "Containerized App",
     },
     {
       title: "BluBooth",
-      description: "A modern frontend photobooth built with Next.js, integrating with a local API. Showcases efficient deployment practices and responsive design.",
+      description:
+        "A modern frontend photobooth built with Next.js, integrating with a local API. Showcases efficient deployment practices and responsive design.",
       image: "/api/placeholder/400/250", // Placeholder image
       techStack: ["Next.js", "React", "API Integration", "Deployment"],
       githubLink: "https://github.com/bluenoe/blubooth", // Example link
       liveLink: "#", // Example live link
-      category: "Frontend App"
-    }
-  ]
+      category: "Frontend App",
+    },
+  ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative overflow-hidden"
+    >
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-40 h-40 bg-gradient-to-br from-purple-200/30 to-blue-300/30 rounded-full blur-2xl"></div>
@@ -64,11 +77,15 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-700 to-purple-700 bg-clip-text text-transparent">
-            🚀 My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">DevOps Adventures</span>
+            🚀 My{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              DevOps Adventures
+            </span>
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 mx-auto mb-8 rounded-full"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Exploring the world of automation, cloud, and robust infrastructure through hands-on projects.
+            Exploring the world of automation, cloud, and robust infrastructure
+            through hands-on projects.
           </p>
         </motion.div>
 
@@ -99,7 +116,7 @@ const Projects = () => {
                 <h3 className="text-xl font-bold mb-4 text-gray-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {project.description}
                 </p>
@@ -108,7 +125,9 @@ const Projects = () => {
                 <div className="mb-8">
                   <div className="flex items-center gap-2 mb-3">
                     <Code className="w-5 h-5 text-blue-600" />
-                    <span className="font-semibold text-gray-700">Tech Stack:</span>
+                    <span className="font-semibold text-gray-700">
+                      Tech Stack:
+                    </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {project.techStack.map((tech) => (
@@ -135,7 +154,7 @@ const Projects = () => {
                     <Github className="w-5 h-5" />
                     Code
                   </motion.a>
-                  
+
                   <motion.a
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
@@ -177,7 +196,7 @@ const Projects = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
