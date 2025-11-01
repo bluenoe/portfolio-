@@ -11,31 +11,40 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "To-do List App",
-      description: "A clean and intuitive task tracker that helps users organize their daily activities with smooth animations and local storage persistence.",
-      image: "/api/placeholder/400/250",
-      techStack: ["HTML", "CSS", "JavaScript", "Local Storage"],
-      githubLink: "https://github.com/bluenoe/",
-      liveLink: "https://blu-todo-app.netlify.app",
-      category: "Web App"
+      title: "BluMonitor",
+      description: "A robust Python-based log monitoring tool, containerized with Docker for easy deployment and scalability. Ensures system health and proactive issue detection.",
+      image: "/api/placeholder/400/250", // Placeholder image
+      techStack: ["Python", "Docker", "Monitoring", "Automation"],
+      githubLink: "https://github.com/bluenoe/blumonitor", // Example link
+      liveLink: "#", // No live link for a backend tool
+      category: "DevOps Tool"
     },
     {
-      title: "Weather App",
-      description: "Real-time weather application that fetches live data from OpenWeatherMap API with beautiful UI and location-based forecasts.",
-      image: "/api/placeholder/400/250",
-      techStack: ["JavaScript", "CSS", "OpenWeatherMap API", "Geolocation"],
-      githubLink: "https://github.com/bluenoe/",
-      liveLink: "https://blu-weather-app.netlify.app",
-      category: "API Integration"
+      title: "BluApp",
+      description: "A Node.js web application featuring an Nginx reverse proxy for efficient load balancing and a fully automated CI/CD pipeline for seamless deployments.",
+      image: "/api/placeholder/400/250", // Placeholder image
+      techStack: ["Node.js", "Nginx", "CI/CD", "GitHub Actions", "Deployment"],
+      githubLink: "https://github.com/bluenoe/bluapp", // Example link
+      liveLink: "#", // Example live link
+      category: "Web Application"
     },
     {
-      title: "Photobooth Web App",
-      description: "Interactive webcam application allowing users to select layouts, apply filters, set countdown timers, and capture memorable snapshots.",
-      image: "/api/placeholder/400/250",
-      techStack: ["JavaScript", "getUserMedia API", "Canvas", "CSS Filters"],
-      githubLink: "https://github.com/bluenoe/",
-      liveLink: "https://blu-photobooth.netlify.app",
-      category: "Media App"
+      title: "BluChat",
+      description: "A real-time chat application, fully containerized using Docker Compose with MongoDB for persistent data. Demonstrates multi-container orchestration and scalability.",
+      image: "/api/placeholder/400/250", // Placeholder image
+      techStack: ["Docker Compose", "MongoDB", "Containerization", "Orchestration", "Scalability"],
+      githubLink: "https://github.com/bluenoe/bluchat", // Example link
+      liveLink: "#", // Example live link
+      category: "Containerized App"
+    },
+    {
+      title: "BluBooth",
+      description: "A modern frontend photobooth built with Next.js, integrating with a local API. Showcases efficient deployment practices and responsive design.",
+      image: "/api/placeholder/400/250", // Placeholder image
+      techStack: ["Next.js", "React", "API Integration", "Deployment"],
+      githubLink: "https://github.com/bluenoe/blubooth", // Example link
+      liveLink: "#", // Example live link
+      category: "Frontend App"
     }
   ]
 
@@ -55,11 +64,11 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-blue-700 to-purple-700 bg-clip-text text-transparent">
-            💼 My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
+            🚀 My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">DevOps Adventures</span>
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 mx-auto mb-8 rounded-full"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A showcase of my journey in web development, from simple utilities to complex applications.
+            Exploring the world of automation, cloud, and robust infrastructure through hands-on projects.
           </p>
         </motion.div>
 

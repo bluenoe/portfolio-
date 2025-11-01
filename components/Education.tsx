@@ -12,40 +12,38 @@ const Education = () => {
   const educationItems = [
     {
       icon: <BookOpen className="w-6 h-6" />,
-      title: "Self-Directed Learning",
-      institution: "Online Platforms & Documentation",
+      title: "Self-Directed DevOps Learning Journey",
+      institution: "Online Platforms, Documentation & Community",
       period: "2022 - Present",
-      description: "Continuously learning through hands-on projects, online courses, and official documentation. Focus on practical application and real-world problem solving.",
-      highlights: ["Project-based learning", "Community engagement", "Open source contributions"]
-    },
-    {
-      icon: <Award className="w-6 h-6" />,
-      title: "Web Development Fundamentals",
-      institution: "Various Online Courses",
-      period: "2023",
-      description: "Completed comprehensive courses covering HTML, CSS, JavaScript, and modern web development practices.",
-      highlights: ["Responsive design", "JavaScript ES6+", "Version control with Git"]
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Programming Fundamentals",
-      institution: "Self-Study & Practice",
-      period: "2022 - 2023",
-      description: "Built strong foundation in programming concepts through C and Python, focusing on algorithms and data structures.",
-      highlights: ["Problem solving", "Algorithm design", "Code optimization"]
+      description: "Embarked on an intensive self-taught journey into DevOps, cloud computing, and automation. Consistently engaging with cutting-edge technologies and best practices.",
+      highlights: [
+        "Online courses on cloud infrastructure, Docker, CI/CD, Linux fundamentals",
+        "Hands-on projects and practical problem-solving",
+        "Extensive documentation reading and open-source contributions"
+      ]
     }
   ]
 
   const learningPaths = [
     {
       icon: <Lightbulb className="w-5 h-5" />,
-      title: "Current Focus",
-      items: ["Full-Stack Development", "React Ecosystem", "Database Design", "API Development"]
+      title: "🎯 Current Focus",
+      items: [
+        "Infrastructure as Code (IaC) - Terraform/Ansible",
+        "Advanced CI/CD Automation - Jenkins/GitLab CI",
+        "Cloud Deployment Strategies (AWS/GCP)",
+        "Kubernetes Fundamentals & Orchestration"
+      ]
     },
     {
       icon: <Calendar className="w-5 h-5" />,
-      title: "Next Quarter Goals",
-      items: ["TypeScript Mastery", "Cloud Deployment", "Testing Frameworks", "Mobile Development"]
+      title: "🚀 Next Quarter Goals",
+      items: [
+        "Build multi-container CI/CD pipeline with advanced testing",
+        "Deploy full-stack application to cloud with auto-scaling",
+        "Integrate Prometheus + Grafana for comprehensive monitoring",
+        "Earn a recognized DevOps certification (e.g., AWS Certified DevOps Engineer)"
+      ]
     }
   ]
 
@@ -60,11 +58,11 @@ const Education = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            📚 Education & <span className="gradient-text">Learning</span>
+            📚 My <span className="gradient-text">DevOps Journey</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-600 to-accent-500 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            My learning journey is driven by curiosity and hands-on experience, constantly evolving with the tech landscape.
+            My path to becoming a DevOps Engineer is paved with continuous learning, hands-on exploration, and a passion for building resilient systems.
           </p>
         </motion.div>
 

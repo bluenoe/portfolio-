@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Gamepad2, Palette, Globe, Wrench, Music, Camera } from 'lucide-react'
+import { Gamepad2, Palette, Globe, Wrench, Music, Camera, Lightbulb, BookOpen, Cog } from 'lucide-react'
 
 const Hobbies = () => {
   const ref = useRef(null)
@@ -11,49 +11,49 @@ const Hobbies = () => {
 
   const hobbies = [
     {
+      icon: <Wrench className="w-8 h-8" />,
+      title: "Tinkering with Linux Servers",
+      description: "Diving deep into Linux environments, optimizing configurations, and automating system tasks. It's all about building a robust foundation.",
+      color: "from-green-400 to-emerald-400",
+      bgColor: "bg-green-50",
+      textColor: "text-green-600"
+    },
+    {
+      icon: <Cog className="w-8 h-8" />,
+      title: "Optimizing Docker Builds",
+      description: "Fine-tuning Dockerfiles, streamlining build processes, and ensuring efficient containerization for seamless deployments. Every byte counts!",
+      color: "from-blue-400 to-cyan-400",
+      bgColor: "bg-blue-50",
+      textColor: "text-blue-600"
+    },
+    {
+      icon: <Lightbulb className="w-8 h-8" />,
+      title: "Experimenting with New Tech Stacks",
+      description: "Always on the hunt for the next big thing in cloud, automation, and infrastructure. Learning by doing is my mantra.",
+      color: "from-orange-400 to-red-400",
+      bgColor: "bg-orange-50",
+      textColor: "text-orange-600"
+    },
+    {
       icon: <Gamepad2 className="w-8 h-8" />,
       title: "Gaming",
-      description: "Exploring virtual worlds and strategic thinking through various game genres. Gaming teaches me problem-solving and quick decision-making.",
+      description: "Unwinding with strategic games and simulations, sharpening problem-solving skills and quick decision-making in virtual worlds.",
       color: "from-purple-400 to-pink-400",
       bgColor: "bg-purple-50",
       textColor: "text-purple-600"
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Learning Languages",
-      description: "Currently learning English and Korean. I believe language learning enhances cognitive flexibility and cultural understanding.",
-      color: "from-blue-400 to-cyan-400",
-      bgColor: "bg-blue-50",
-      textColor: "text-blue-600"
-    },
-    {
-      icon: <Wrench className="w-8 h-8" />,
-      title: "Building Fun Tools",
-      description: "Creating small utilities and apps that solve everyday problems or just bring joy. Every tool is a learning opportunity.",
-      color: "from-green-400 to-emerald-400",
-      bgColor: "bg-green-50",
-      textColor: "text-green-600"
-    },
-    {
-      icon: <Palette className="w-8 h-8" />,
-      title: "Designing Things",
-      description: "From UI mockups to creative graphics, I love bringing ideas to life through visual design and user experience.",
-      color: "from-orange-400 to-red-400",
-      bgColor: "bg-orange-50",
-      textColor: "text-orange-600"
-    },
-    {
-      icon: <Music className="w-8 h-8" />,
-      title: "Music & Audio",
-      description: "Exploring different genres and occasionally experimenting with audio editing. Music fuels creativity and focus.",
+      title: "Flying Simulation",
+      description: "Taking to the virtual skies, mastering complex controls and navigation. It's a different kind of engineering challenge!",
       color: "from-indigo-400 to-purple-400",
       bgColor: "bg-indigo-50",
       textColor: "text-indigo-600"
     },
     {
-      icon: <Camera className="w-8 h-8" />,
-      title: "Digital Content",
-      description: "Creating and editing digital content, from photography to video projects. Visual storytelling is a passion.",
+      icon: <BookOpen className="w-8 h-8" />,
+      title: "Learning New Languages (English & Korean)",
+      description: "Expanding horizons by learning new human languages, enhancing communication and cultural understanding. An essential skill for global collaboration.",
       color: "from-pink-400 to-rose-400",
       bgColor: "bg-pink-50",
       textColor: "text-pink-600"
@@ -61,12 +61,9 @@ const Hobbies = () => {
   ]
 
   const funFacts = [
-    "🎮 Favorite game genre: Strategy and puzzle games",
-    "🌏 Dream: To travel and code from different countries",
-    "🎨 Design inspiration: Minimalist and modern aesthetics",
-    "📱 Always experimenting with new apps and tools",
-    "🎵 Coding playlist: Lo-fi hip hop and ambient music",
-    "🌱 Believer in continuous learning and growth"
+    "I once debugged a Docker container issue for 6 hours straight, and the fix was a single missing colon. #DevOpsLife",
+    "My ideal weekend involves a new cloud certification course and a strong cup of Vietnamese coffee.",
+    "I believe automation is the answer to most problems, including making my morning coffee (still working on that one)."
   ]
 
   return (
@@ -85,11 +82,11 @@ const Hobbies = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-800 via-purple-700 to-blue-700 bg-clip-text text-transparent">
-            🎨 Hobbies & <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Interests</span>
+            🎮 Beyond the Terminal: <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">My Interests</span>
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 mx-auto mb-8 rounded-full"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Beyond coding, I'm passionate about creativity, learning, and exploring new experiences that shape my perspective.
+            When I'm not automating infrastructure or optimizing deployments, here's what keeps me curious and creative.
           </p>
         </motion.div>
 
@@ -162,8 +159,7 @@ const Hobbies = () => {
           <div className="bg-gradient-to-r from-primary-50 to-accent-50 p-8 rounded-xl max-w-4xl mx-auto">
             <div className="text-4xl mb-4">💭</div>
             <blockquote className="text-xl text-gray-700 font-medium italic mb-4">
-              "Life is like coding - it's all about finding creative solutions, 
-              learning from bugs, and never stopping the journey of improvement."
+              "The only way to do great work is to love what you do. And I love building resilient systems." - Blu
             </blockquote>
             <cite className="text-primary-600 font-semibold">- Blu</cite>
           </div>
